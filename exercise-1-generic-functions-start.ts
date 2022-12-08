@@ -16,11 +16,11 @@ let value2 = identity<number>(67_413_000);
 
 // ----
 
-async function fetchData<Type>(url: string) {
+async function fetchData<User>(url: string) {
   const response = await fetch(url);
   const responseBody = await response.json();
 
-  return responseBody as User;
+  return responseBody;
 }
 
 interface User {
